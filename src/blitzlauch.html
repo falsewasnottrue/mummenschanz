@@ -1,0 +1,53 @@
+<html>
+<body style="vertical-align: center;">
+<button id="start">Beleidige mich!</button>
+<div style="font-size: large" id="beleidigung"></div>
+
+<script type="application/javascript">
+    var prefix = [
+        "Arsch","Bart","Bauch","Besen","Bettel","Bett","Bierhaus","Blitz","Bohnen",
+        "Brandwein","Bratwurst","Brause","Brösel","Brumm","Brunz","Büchsen","Bullen",
+        "Butter","Buttermilch","Dick","Donner","Donnerhagel","Dorf","Drecks","Elends",
+        "Erz","Erzgalgen","Faul","Feder","Galgen","Geld","Glatt","Glotz","Gurken",
+        "Hänge","Hanswurst","Hasen","Himmels","Klapper","Latsch","Lecker","Lügen",
+        "Mauer","Milch","Nimmer","Ofen","Pamp","Pantoffel","Sauer","Sauf","Schand",
+        "Scheiß","Schiel","Schlabber","Schlapp","Schwarten","Schwindel","Spatzen",
+        "Spitz","Straßen","Sünden","Talg","Tausend","Gurken","Puder","Quer",
+        "Kümmer","Speck","Voll","Schweine","Trottel","Schrumpf","Leber","Schnitt",
+        "Wüst","Wurst","Moder","Schimmel","Lahm","Affen","Allerwelts","Alltags",
+        "Angst","Knall","Knodder","Bauern","Diebs","Esels","Falsch","Flachs","Flatter",
+        "Fleisch","Geifer","Glücks","Grind","Halb","Dreiviertel","Hexen","Höllen",
+        "Hunds","Kaffee","Frühstücks","Kinds","Klotz","Kreuz","Land","Lotter",
+        "Lumpen","Maul","Miß","Nacht","Nattern","Ochsen","Pfeffer","Plapper",
+        "Plauder","Prall","Pummel","Rinds","Rotz","Sau","Schachtel","Schein",
+        "Schmier","Schmoll","Schmutz","Schreck","Schwach","Spott","Trampel",
+        "Vieh","Voll","Viertel","Wackel","Zitter","Weiber","Wetter","Winkel","Wider",
+        "Zauder"
+    ];
+    var suffix = [
+        "gucker","kröte","monarch","putzer","schmelzer","pfaffe","reißer",
+        "reiter","brunzer","gänger","pack","pisser","schwätzer","bube","junge",
+        "kerl","jockel","bulle","maul","kopf","dieb","teufel","scheißer","beißer",
+        "prophet","fräulein","wurm","schwengel","bauch","wolf","gesicht","prediger",
+        "macher","backe","bock","kanzler","fechter","geige","geiger","mann","liese",
+        "michel","zunge","luder","ling","puppe","püppchen","pudel","schwester","bruder",
+        "ritter","gurgel","balg","schlucker","matz","bock","tasche","strumpf","lutscher",
+        "hirn","kopf","mutter","vater","vogel","lümmel","schelm","depp","lump","mensch",
+        "sack","zausel","lauch","birne","pfosten","priester","schwein","trottel","wurst",
+        "hammel","eumel","hase","tonne","beutel","nase","fresser","hund","köter",
+        "meister","narr","pelz","knecht","pilz","schädel","schnabel","schnauze",
+        "plage","braten","schlange","vieh","fee","weib","mädchen","hals","tüte"
+    ];
+
+    function makeBeleidigung() {
+        const prefixIndex = Math.floor(Math.random() * prefix.length);
+        const suffixIndex = Math.floor(Math.random() * suffix.length);
+
+        const beleidigung = prefix[prefixIndex] + suffix[suffixIndex];
+        document.getElementById("beleidigung").innerText = beleidigung;
+    }
+
+    document.getElementById("start").onclick = makeBeleidigung;
+</script>
+</body>
+</html>
